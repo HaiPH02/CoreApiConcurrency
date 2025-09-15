@@ -12,7 +12,7 @@ public class ApiRepository<T: Codable>: CoreApiRepositoryProtocol {
     private let scheme: String = "https"
     private let endPoint: String
     
-    init(_ endPoint: String) {
+    public init(_ endPoint: String) {
         self.endPoint = endPoint
     }
     
