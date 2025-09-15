@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CoreApiRepositoryProtocol {
+public protocol CoreApiRepositoryProtocol {
     associatedtype T
     
     func fetchItem(path: String,

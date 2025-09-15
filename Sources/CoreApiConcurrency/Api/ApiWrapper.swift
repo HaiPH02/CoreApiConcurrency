@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ApiRepository<T: Codable>: CoreApiRepositoryProtocol {
+public class ApiRepository<T: Codable>: CoreApiRepositoryProtocol {
     
     private let scheme: String = "https"
     private let endPoint: String
@@ -16,7 +16,7 @@ class ApiRepository<T: Codable>: CoreApiRepositoryProtocol {
         self.endPoint = endPoint
     }
     
-    func fetchItem(path: String, param: [String : any Codable], needAuthToken: Bool) async throws -> T {
+    public func fetchItem(path: String, param: [String : any Codable], needAuthToken: Bool) async throws -> T {
         guard Connectivity.isConnetedToInternet else  {
             throw CustomError.noInternet
         }

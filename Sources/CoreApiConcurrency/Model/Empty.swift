@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Empty {
-    init() {
+public struct Empty {
+    public init() {
     }
 }
